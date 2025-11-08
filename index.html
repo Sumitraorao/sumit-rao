@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WorkHaat: Freelance Marketplace</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <script>
+    // Custom Tailwind Config to match the design system
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            serif: ['DM Serif Display', 'serif'],
+          },
+          colors: {
+            primary: {
+              50: '#EEF2FF',
+              100: '#E0E7FF',
+              200: '#C7D2FE',
+              500: '#6366F1',
+              600: '#5A67D8', // Primary: Indigo
+              700: '#4338CA',
+            },
+            secondary: '#22C55E', // Secondary: Green
+            accent: '#F59E0B', // Accent: Amber
+          },
+        },
+      },
+    }
+  </script>
+
+  <script type="importmap">
+  {
+    "imports": {
+      "react": "https://aistudiocdn.com/react@^19.2.0",
+      "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+      "react/": "https://aistudiocdn.com/react@^19.2.0/",
+      "@heroicons/react/": "https://aistudiocdn.com/@heroicons/react@^2.2.0/"
+    }
+  }
+  </script>
+
+  <style>
+    /* Global font styles and animation definitions */
+    body {
+        font-family: 'Inter', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'DM Serif Display', serif;
+    }
+    .animate-fade-in-up {
+        opacity: 0;
+        animation-name: fadeInUp;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
+    }
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translate3d(0, 20px, 0);
+        }
+        to {
+            opacity: 1;
+            transform: translate3d(0, 0, 0);
+        }
+    }
+  </style>
+
+</head>
+<body class="bg-gray-50">
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

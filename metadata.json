@@ -1,0 +1,5 @@
+{
+  "name": "Copy of WorkHaat: Freelance Marketplace",
+  "description": "A two-sided marketplace like Upwork/Fiverr where clients can post jobs and freelancers can offer their services through gigs and proposals. Built with React, TypeScript, and Tailwind CSS.",
+  "requestFramePermissions": []
+}
